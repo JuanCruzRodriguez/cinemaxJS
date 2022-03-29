@@ -1,0 +1,38 @@
+[
+    {
+    "id": 1,
+    "nombre": "Scream",
+    "imagen": "multimedia/images/scream.png",
+    "imgAlt": "Scream"
+    },
+    {
+    "id": 2,
+    "nombre": "Pasajero 666",
+    "imagen": "multimedia/images/pasajero666.png",
+    "imgAlt": "Pasajero 666"
+    },
+    {
+    "id": 3,
+    "nombre": "Moonfall",
+    "imagen": "multimedia/images/moonfall.png",
+    "imgAlt": "Moonfall"
+    },
+    {
+    "id": 4,
+    "nombre": "El regreso de Gulliver",
+    "imagen": "multimedia/images/elregresodegulliver.png",
+    "imgAlt": "El regreso de Gulliver"
+    },
+    {
+    "id": 5,
+    "nombre": "Sing 2",
+    "imagen": "multimedia/images/sing2.png",
+    "imgAlt": "Sing 2"
+    },
+    {
+    "id": 6,
+    "nombre": "Spiderman: No way home",
+    "imagen": "multimedia/images/spiderman.png",
+    "imgAlt": "Spiderman: No way home"
+    }
+]

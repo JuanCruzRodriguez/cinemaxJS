@@ -1,0 +1,38 @@
+[
+    {
+    "id": 1,
+    "nombre": "Muerte en el Nilo",
+    "imagen": "multimedia/images/muerteenelnilo.png",
+    "imgAlt": "Muerte en el Nilo"
+    },
+    {
+    "id": 2,
+    "nombre": "Minions 2",
+    "imagen": "multimedia/images/minions2.png",
+    "imgAlt": "Minions 2"
+    },
+    {
+    "id": 3,
+    "nombre": "Uncharted: Fuera del mapa",
+    "imagen": "multimedia/images/unchartedfueradelmapa.png",
+    "imgAlt": "Uncharted: Fuera del mapa"
+    },
+    {
+    "id": 4,
+    "nombre": "Top Gun 2",
+    "imagen": "multimedia/images/topgun2.png",
+    "imgAlt": "Top Gun 2"
+    },
+    {
+    "id": 5,
+    "nombre": "Ambulancia",
+    "imagen": "multimedia/images/ambulancia.png",
+    "imgAlt": "Ambulancia"
+    },
+    {
+    "id": 6,
+    "nombre": "Sonic 2",
+    "imagen": "multimedia/images/sonic2.png",
+    "imgAlt": "Sonic 2"
+    }
+]

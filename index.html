@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" type="image/jpg" href="multimedia/images/icono.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Pagina de inicio - Cinemax</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="multimedia/images/cinemax.png" alt="logo de cine" width="120px" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="#">Cartelera</a></li>
+                <li><a href="#">Proximamente</a></li>
+                <li><a href="products.html">Candy</a></li>
+                <button class="botonCarrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-cart2"></i></button>
+                <div class="offcanvas offcanvas-end w-25" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header tituloCarrito">
+                        <h5 id="offcanvasRightLabel">Carrito</h5>
+                        <button type="button" class="text-reset closeCarrito" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                    </div>
+                    <div class="offcanvas-body" id="carrito">
+                    </div>
+                    <div id="total">
+                        <p>Total = <span id="totalspan">0</span></p>
+                    </div>
+                    <div id="botonesCarrito">
+                        <button type="cancel" id="cancelarCompra">Cancelar compra</button>
+                        <button type="submit" id="confirmarCompra">Confirmar compra</button>
+                    </div>
+                </div>
+                <!-- Button trigger modal -->
+                <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" id="buttonSesion"><i class="bi bi-person"></i></button>
+            </ul>
+            <div id="emailUser"></div>
+            <button id="logOut"></button>
+        </nav>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" id="modalSesion">
+                <div class="modal-header modalHeader">
+                    <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" id="btnCloseSesion"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="modal-body" id="bodySesion">
+                    <form action="" id="formSesion">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="emailSesion" class="inputSesion">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="passwordSesion" class="inputSesion">
+                        <input type="submit" value="Iniciar Sesión" data-bs-dismiss="modal" id="btnIniciarSesion">
+                    </form>
+                    <div class="registrate">
+                        <a href="#">Olvidé mi contraseña</a>
+                        <p>¿No tienes una cuenta? <a href="#">Registrate</a></p>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="multimedia/images/proximamente1.jpg" class="d-block w-100" alt="muerte en el nilo">
+            </div>
+            <div class="carousel-item">
+                <img src="multimedia/images/proximamente2.jpg" class="d-block w-100" alt="uncharted">
+            </div>
+            <div class="carousel-item">
+                <img src="multimedia/images/spiderman.jpg" class="d-block w-100" alt="spiderman no way home">
+            </div>
+            <div class="carousel-item">
+                <img src="multimedia/images/proximamente3.jpg" class="d-block w-100" alt="spiderman no way home">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <main>
+        <section>
+            <div class="title">
+                <h2><b>Estrenos</b></h2>
+                <button class="vermas"><a href="#">Ver mas +</a></button>
+            </div>    
+            <div class="peliculas" id="listadoEstrenos">
+            </div>
+        </section>
+        <section>
+            <div class="title">
+                <h2><b>Proximamente</b></h2>
+                <button class="vermas"><a href="#">Ver mas +</a></button>
+            </div>    
+            <div class="peliculas" id="listadoProximamente">
+            </div>
+        </section>    
+    </main>
+
+    <footer>
+        <nav class="redes">
+            <a href="https://web.whatsapp.com/send?phone=+5492215137609&text=Hola%20Coderhouse!%20C%C3%B3mo%20est%C3%A1n?%20Tengo%20una%20consulta%20sobre" target="_blank"><i class="bi bi-whatsapp"></i></a> 
+            <a href="https://www.instagram.com/coderhouse" target="_blank"><i class="bi bi-instagram"></i></a> 
+            <a href="https://www.facebook.com/CoderHouse" target="_blank"><i class="bi bi-facebook"></i></a> 
+            <a href="https://twitter.com/CODERHOUSE" target="_blank"><i class="bi bi-twitter"></i></a> 
+        </nav>
+        <nav>
+            <h4><b>Películas</b></h4>    
+            <ul>  
+                <li><a href="#">Cartelera</a></li>    
+                <li><a href="#">Estrenos</a></li>
+                <li><a href="#">Proximamente</a></li>
+            </ul>
+        </nav>    
+        <nav>  
+            <h4><b>Ayuda</b></h4>    
+            <ul>  
+                <li><a href="#">¿Cómo comprar?</a></li>    
+                <li><a href="#">Medios de pago</a></li>    
+                <li><a href="#">Preguntas frecuentes</a></li>
+            </ul>
+        </nav>  
+        <nav>
+            <h4><b>Información</b></h4>    
+            <ul>  
+                <li><a href="https://goo.gl/maps/5fcGT1KgZugcbyL1A" target="_blank">Calle 1234</a></li>   
+                <li>Horario: 10 a 02 hs</li>   
+                <li><a href="#">Contactanos</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

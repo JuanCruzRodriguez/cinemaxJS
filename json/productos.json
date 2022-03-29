@@ -1,0 +1,30 @@
+[
+    {
+    "id": 1,
+    "nombre": "Balde",
+    "imagen": "multimedia/images/balde.png",
+    "imgAlt": "Balde de pochoclos",
+    "precio": 500
+    },
+    {
+    "id": 2,
+    "nombre": "Bebida",
+    "imagen": "multimedia/images/bebida.png",
+    "imgAlt": "Bebida",
+    "precio": 250
+    },
+    {
+    "id": 3,
+    "nombre": "Combo 1",
+    "imagen": "multimedia/images/combo1.png",
+    "imgAlt": "Combo 1",
+    "precio": 900
+    },
+    {
+    "id": 4,
+    "nombre": "Combo 2",
+    "imagen": "multimedia/images/combo2.png",
+    "imgAlt": "Combo 2",
+    "precio": 1600
+    }
+]
